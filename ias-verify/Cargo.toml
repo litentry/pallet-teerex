@@ -1,17 +1,17 @@
 [package]
-name = "ias-verify"
-version = "0.1.4"
-description = "a certificate verification and IAS report parser crate for the teerex pallet"
 authors = ["Integritee AG"]
-homepage = "https://integritee.network/"
-repository = "https://github.com/integritee-network/pallet-teerex/"
-license = "Apache-2.0"
+description = "a certificate verification and IAS report parser crate for the teerex pallet"
 edition = "2018"
+homepage = "https://integritee.network/"
+license = "Apache-2.0"
+name = "ias-verify"
+repository = "https://github.com/integritee-network/pallet-teerex/"
+version = "0.1.4"
 
 [dependencies]
-base64 = { version = "0.11", default-features = false, features = ["alloc"] }
-serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
-chrono = { version = "0.4", default-features = false }
+base64 = {version = "0.11", default-features = false, features = ["alloc"]}
+chrono = {version = "0.4", default-features = false}
+serde_json = {version = "1.0", default-features = false, features = ["alloc"]}
 
 [dependencies.codec]
 default-features = false
@@ -22,27 +22,27 @@ version = '2.0.0'
 [dependencies.frame-support]
 default-features = false
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 
 [dependencies.sp-std]
 default-features = false
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 
 [dependencies.sp-io]
 default-features = false
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 #features = ["disable_panic_handler", "disable_oom"]
 
 [dependencies.sp-core]
 default-features = false
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 
 [dependencies.webpki]
-git = 'https://github.com/scs/webpki-nostd.git'
 default_features = false
+git = 'https://github.com/scs/webpki-nostd.git'
 
 [dev-dependencies]
 hex-literal = "*"
@@ -50,10 +50,10 @@ hex-literal = "*"
 [features]
 default = ['std']
 std = [
-    'codec/std',
-    'frame-support/std',
-    'sp-std/std',
-    'sp-io/std',
-    'serde_json/std',
-    'webpki/std',
+  'codec/std',
+  'frame-support/std',
+  'sp-std/std',
+  'sp-io/std',
+  'serde_json/std',
+  'webpki/std',
 ]

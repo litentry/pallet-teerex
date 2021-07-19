@@ -1,23 +1,23 @@
 [package]
-name = "pallet-teerex"
-description = "The remote attestation registry and verification pallet for integritee blockchains and parachains"
-version = "0.9.0"
 authors = ["Integritee AG"]
-homepage = "https://integritee.network/"
-repository = "https://github.com/integritee-network/pallet-teerex/"
-license = "Apache-2.0"
+description = "The remote attestation registry and verification pallet for integritee blockchains and parachains"
 edition = "2018"
+homepage = "https://integritee.network/"
+license = "Apache-2.0"
+name = "pallet-teerex"
+repository = "https://github.com/integritee-network/pallet-teerex/"
 resolver = "2"
+version = "0.9.0"
 
 [workspace]
 members = [
-    'ias-verify',
+  'ias-verify',
 ]
 
 [dependencies]
-serde = { features = ['derive'], optional = true, version = '1.0.101' }
-log = { version = "0.4.14", default-features = false }
-hex-literal = { version = "0.3.2", optional = true }
+hex-literal = {version = "0.3.2", optional = true}
+log = {version = "0.4.14", default-features = false}
+serde = {features = ['derive'], optional = true, version = '1.0.101'}
 
 [dependencies.codec]
 default-features = false
@@ -32,94 +32,92 @@ path = './ias-verify'
 [dependencies.frame-support]
 default-features = false
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 
 [dependencies.frame-system]
 default-features = false
-package = 'frame-system'
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+package = 'frame-system'
+tag = "v3.0.0"
 
 [dependencies.sp-io]
 default-features = false
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 
 [dependencies.sp-core]
 default-features = false
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 
 [dependencies.sp-runtime]
 default-features = false
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 
 [dependencies.sp-std]
 default-features = false
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 
 [dependencies.timestamp]
 default-features = false
-package = "pallet-timestamp"
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
-
+package = "pallet-timestamp"
+tag = "v3.0.0"
 
 ## benchmarking stuff
 [dependencies.frame-benchmarking]
 default-features = false
-optional = true
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+optional = true
+tag = "v3.0.0"
 
 [dependencies.pallet-balances]
-optional = true
 default-features = false
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+optional = true
+tag = "v3.0.0"
 
 [dev-dependencies]
-hex-literal = "*"
 env_logger = "0.7.1"
+hex-literal = "*"
 log = "*"
 
 [dev-dependencies.externalities]
-package = "sp-externalities"
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+package = "sp-externalities"
+tag = "v3.0.0"
 
 [dev-dependencies.sp-keyring]
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 
 [dev-dependencies.pallet-balances]
 git = "https://github.com/paritytech/substrate.git"
-branch = "master"
+tag = "v3.0.0"
 
 [features]
 default = ['std']
-std = [
-    'serde',
-    'codec/std',
-    'frame-support/std',
-    'frame-system/std',
-    'ias-verify/std',
-    'sp-core/std',
-    'sp-io/std',
-    'sp-runtime/std',
-    'sp-std/std',
-    'timestamp/std',
-    # benchmarking stuff
-    'frame-benchmarking/std',
-    "pallet-balances/std",
-]
 runtime-benchmarks = [
-    'frame-benchmarking',
-    "hex-literal",
-    "pallet-balances",
-    "timestamp/runtime-benchmarks"
+  'frame-benchmarking',
+  "hex-literal",
+  "pallet-balances",
+  "timestamp/runtime-benchmarks",
+]
+std = [
+  'serde',
+  'codec/std',
+  'frame-support/std',
+  'frame-system/std',
+  'ias-verify/std',
+  'sp-core/std',
+  'sp-io/std',
+  'sp-runtime/std',
+  'sp-std/std',
+  'timestamp/std', # benchmarking stuff
+  'frame-benchmarking/std',
+  "pallet-balances/std",
 ]
 # allow workers to register without remote attestation for dev purposes
 skip-ias-check = []
