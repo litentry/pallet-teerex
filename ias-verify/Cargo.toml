@@ -21,24 +21,20 @@ version = '2.0.0'
 
 [dependencies.frame-support]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dependencies.sp-std]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dependencies.sp-io]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 #features = ["disable_panic_handler", "disable_oom"]
 
 [dependencies.sp-core]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dependencies.webpki]
 default_features = false

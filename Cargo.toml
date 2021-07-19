@@ -31,53 +31,44 @@ path = './ias-verify'
 
 [dependencies.frame-support]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dependencies.frame-system]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
 package = 'frame-system'
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dependencies.sp-io]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dependencies.sp-core]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dependencies.sp-runtime]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dependencies.sp-std]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dependencies.timestamp]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
 package = "pallet-timestamp"
-tag = "v3.0.0"
+version = "3.0.0"
 
 ## benchmarking stuff
 [dependencies.frame-benchmarking]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
 optional = true
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dependencies.pallet-balances]
 default-features = false
-git = "https://github.com/paritytech/substrate.git"
 optional = true
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dev-dependencies]
 env_logger = "0.7.1"
@@ -85,17 +76,14 @@ hex-literal = "*"
 log = "*"
 
 [dev-dependencies.externalities]
-git = "https://github.com/paritytech/substrate.git"
 package = "sp-externalities"
-tag = "v3.0.0"
+version = "0.9.0"
 
 [dev-dependencies.sp-keyring]
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 
 [dev-dependencies.pallet-balances]
-git = "https://github.com/paritytech/substrate.git"
-tag = "v3.0.0"
+version = "3.0.0"
 
 [features]
 default = ['std']
